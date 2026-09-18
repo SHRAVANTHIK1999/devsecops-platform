@@ -27,4 +27,6 @@ jobs:
         run: chmod +x mvnw
 
       - name: Build and test
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: ./mvnw clean verify
