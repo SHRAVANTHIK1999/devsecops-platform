@@ -1,0 +1,18 @@
+replicaCount: 2
+
+image:
+  repository: devsecops-platform
+  tag: "1.3"
+  pullPolicy: Never
+
+service:
+  type: NodePort
+  port: 80
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "256Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
